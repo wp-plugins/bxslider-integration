@@ -360,6 +360,7 @@ class BXSG_Settings {
 				self::$OPTION_GS_CAROUSEL_THUMBS_MOVE		=> 0,
 			);
 		
+		if ( ! is_array( $current_options ) ) $current_options = array();
 		$this->options = array_merge( $this->default_options, $current_options );
 		
 // 		 echo 'default options:'; var_dump( $this->default_options );

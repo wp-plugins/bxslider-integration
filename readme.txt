@@ -3,7 +3,7 @@ Contributors: vprat, marvinlabs
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -103,6 +103,10 @@ just like any other simple plugin.
 Because you did not ask :p
 
 == Changelog ==
+
+= 1.1.1 (2013/04/08) =
+
+* Fixed a bug on activation ([function.array-merge]: Argument #2 is not an array in bxslider-integration/includes/settings.class.php)
 
 = 1.1.0 (2013/03/29) =
 
