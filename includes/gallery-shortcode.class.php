@@ -61,7 +61,9 @@ class BXSG_GalleryShortcode {
 		extract( shortcode_atts( array(
 				'ids'				=> null,
 				'exclude_featured'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_EXCLUDE_FEATURED_IMAGE ),
-				'hide_carousel'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_HIDE_CAROUSEL )
+				'hide_carousel'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_HIDE_CAROUSEL ),
+				'adaptive_height'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_ADAPTIVE_HEIGHT ),
+				'auto_start'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_AUTO_START )
 			), $params ) );
 		
 		// If no ids are provided, we will take every image attached to the current post. 

@@ -54,14 +54,19 @@ class BXSG_SliderShortcode {
 	public function process_slider_shortcode( $params = array(), $content = null ) {
 		// Extract parameters and provide defaults for the missing ones
 		extract( shortcode_atts( array(
+				'adaptive_height'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_ADAPTIVE_HEIGHT ),
+				'auto_start'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_AUTO_START )
 			), $params ) );
 		
 		// Compute an ID for this particular slider
 		$slider_id = 'bx-slider-' . $this->current_slider_id;
 		$this->current_slider_id += 1;
+
+		$slider_extra_classes = $adaptive_height ? 'adaptive-height-on ' : 'adaptive-height-off ';
+		$slider_extra_classes = esc_attr($slider_extra_classes);
 		
 		// Build the HTML output
-		$out  = "<div id='{$slider_id}'>" . "\n";
+		$out  = "<div id='{$slider_id}' class='bxslider-slider {$slider_extra_classes}'>" . "\n";
 		$out .= "  <div class='bxslider'>" . "\n";
 		$out .= "    <div class='slide'>" . "\n";
   		$out .= do_shortcode( $content );

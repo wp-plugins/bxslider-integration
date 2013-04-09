@@ -17,7 +17,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 ?>
 
-<div id="<?php echo $gallery_id; ?>" class="bxslider-gallery">
+<?php 
+$gallery_extra_classes = $adaptive_height ? 'adaptive-height-on ' : 'adaptive-height-off ';
+?>
+
+<div id="<?php echo $gallery_id; ?>" class="bxslider-gallery <?php echo esc_attr( $gallery_extra_classes ); ?>">
+	<div class="gallery-wrapper">
 	<div class="bxslider">
 <?php 	
 foreach ( $attachments as $attachment ) : 
@@ -31,9 +36,11 @@ foreach ( $attachments as $attachment ) :
 <?php  	
 endforeach; ?>  		
 	</div>
+	</div>
 	
 <?php if ( !$hide_carousel ) : ?>	
 
+	<div class="pager-wrapper">
 	<div class="bxpager">
 <?php 	
 $i = 0;
@@ -46,6 +53,7 @@ foreach ( $attachments as $attachment ) :
 		$img_attr[0], esc_attr( $desc ), esc_attr( $title ), $i );   	
 	++$i;
 endforeach; ?>  		
+	</div>		
 	</div>
 	
 <?php endif; // !$hide_carousel ?>	

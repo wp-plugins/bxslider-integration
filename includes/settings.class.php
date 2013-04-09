@@ -153,6 +153,36 @@ class BXSG_Settings {
 			);	
 		
 		add_settings_field(
+				self::$OPTION_GS_ADAPTIVE_HEIGHT, 
+				__('Adaptive height', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_gallery_shortcode',
+				array( 
+					'option_id' => self::$OPTION_GS_ADAPTIVE_HEIGHT, 
+	    			'type' 		=> 'checkbox', 
+	    			'caption'	=> __( "Dynamically adjust slider height based on each slide's height.", 'bxsg' ) 
+	    				. '<p class="description">'
+	    				. __( 'This can be overriden in the shortcode itself by passing the parameter <code>adaptive_height=0</code> or <code>adaptive_height=1</code>.', 'bxsg' )
+	    				. '</p>' )
+			);
+		
+		add_settings_field(
+				self::$OPTION_GS_AUTO_START, 
+				__('Auto start', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_gallery_shortcode',
+				array( 
+					'option_id' => self::$OPTION_GS_AUTO_START, 
+	    			'type' 		=> 'checkbox', 
+	    			'caption'	=> __( "Gallery slideshow will automatically start.", 'bxsg' ) 
+	    				. '<p class="description">'
+	    				. __( 'This can be overriden in the shortcode itself by passing the parameter <code>auto_start=0</code> or <code>auto_start=1</code>.', 'bxsg' )
+	    				. '</p>' )
+			);
+		
+		add_settings_field(
 				self::$OPTION_GS_CAROUSEL_THUMB_WIDTH, 
 				__('Carousel thumb width', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
@@ -229,6 +259,36 @@ class BXSG_Settings {
 				array( &$this, 'print_section_info_slider_shortcode' ),
 				self::$OPTIONS_PAGE_SLUG
 			);
+		
+		add_settings_field(
+				self::$OPTION_SL_ADAPTIVE_HEIGHT, 
+				__('Adaptive height', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_slider_shortcode',
+				array( 
+					'option_id' => self::$OPTION_SL_ADAPTIVE_HEIGHT, 
+	    			'type' 		=> 'checkbox', 
+	    			'caption'	=> __( "Dynamically adjust slider height based on each slide's height.", 'bxsg' ) 
+	    				. '<p class="description">'
+	    				. __( 'This can be overriden in the shortcode itself by passing the parameter <code>adaptive_height=0</code> or <code>adaptive_height=1</code>.', 'bxsg' )
+	    				. '</p>' )
+			);
+		
+		add_settings_field(
+				self::$OPTION_SL_AUTO_START, 
+				__('Auto start', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_slider_shortcode',
+				array( 
+					'option_id' => self::$OPTION_SL_AUTO_START, 
+	    			'type' 		=> 'checkbox', 
+	    			'caption'	=> __( "Slides will automatically transition after the page is loaded.", 'bxsg' ) 
+	    				. '<p class="description">'
+	    				. __( 'This can be overriden in the shortcode itself by passing the parameter <code>auto_start=0</code> or <code>auto_start=1</code>.', 'bxsg' )
+	    				. '</p>' )
+			);
     }
 	
     /**
@@ -245,6 +305,8 @@ class BXSG_Settings {
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_REPLACE_DEFAULT_GALLERIES );    
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_EXCLUDE_FEATURED_IMAGE );      
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_HIDE_CAROUSEL );    
+    	$this->validate_boolean( $input, $validated, self::$OPTION_GS_ADAPTIVE_HEIGHT );   
+    	$this->validate_boolean( $input, $validated, self::$OPTION_GS_AUTO_START );    
     	$this->validate_int( $input, $validated, self::$OPTION_GS_CAROUSEL_THUMB_WIDTH, 1 );
     	$this->validate_int( $input, $validated, self::$OPTION_GS_CAROUSEL_THUMB_MARGIN, 0 );
     	$this->validate_int( $input, $validated, self::$OPTION_GS_CAROUSEL_MIN_THUMBS, 1 );
@@ -253,6 +315,9 @@ class BXSG_Settings {
     			self::$OPTION_GS_CAROUSEL_THUMBS_MOVE, 
 	    		0, 
 	    		$validated[ self::$OPTION_GS_CAROUSEL_MAX_THUMBS ] );
+
+    	$this->validate_boolean( $input, $validated, self::$OPTION_SL_ADAPTIVE_HEIGHT );
+    	$this->validate_boolean( $input, $validated, self::$OPTION_SL_AUTO_START );   
     	
     	$this->options = $validated;    	
 		return $validated;
@@ -353,11 +418,16 @@ class BXSG_Settings {
 				self::$OPTION_GS_REPLACE_DEFAULT_GALLERIES 	=> true,
 				self::$OPTION_GS_EXCLUDE_FEATURED_IMAGE 	=> true,
 				self::$OPTION_GS_HIDE_CAROUSEL 				=> false,
+				self::$OPTION_GS_ADAPTIVE_HEIGHT 			=> true,
+				self::$OPTION_GS_AUTO_START 				=> true,
 				self::$OPTION_GS_CAROUSEL_THUMB_WIDTH		=> 60,
 				self::$OPTION_GS_CAROUSEL_THUMB_MARGIN		=> 5,
 				self::$OPTION_GS_CAROUSEL_MIN_THUMBS		=> 4,
 				self::$OPTION_GS_CAROUSEL_MAX_THUMBS		=> 10,
 				self::$OPTION_GS_CAROUSEL_THUMBS_MOVE		=> 0,
+
+				self::$OPTION_SL_ADAPTIVE_HEIGHT 			=> true,
+				self::$OPTION_SL_AUTO_START 				=> true,
 			);
 		
 		if ( ! is_array( $current_options ) ) $current_options = array();
@@ -378,11 +448,17 @@ class BXSG_Settings {
 	public static $OPTION_GS_REPLACE_DEFAULT_GALLERIES 	= 'gs_replace_default_galleries';
 	public static $OPTION_GS_EXCLUDE_FEATURED_IMAGE 	= 'gs_exclude_featured';
 	public static $OPTION_GS_HIDE_CAROUSEL 				= 'gs_hide_carousel';
+	public static $OPTION_GS_ADAPTIVE_HEIGHT			= 'gs_adaptive_height';
+	public static $OPTION_GS_AUTO_START					= 'gs_auto_start';
 	public static $OPTION_GS_CAROUSEL_THUMB_WIDTH		= 'gs_carousel_thumb_width';
 	public static $OPTION_GS_CAROUSEL_THUMB_MARGIN		= 'gs_carousel_thumb_margin';
 	public static $OPTION_GS_CAROUSEL_MIN_THUMBS		= 'gs_carousel_min_thumbs';
 	public static $OPTION_GS_CAROUSEL_MAX_THUMBS		= 'gs_carousel_max_thumbs';
 	public static $OPTION_GS_CAROUSEL_THUMBS_MOVE		= 'gs_carousel_thumbs_move';
+	
+	// Slider shortcodes
+	public static $OPTION_SL_ADAPTIVE_HEIGHT			= 'sl_adaptive_height';
+	public static $OPTION_SL_AUTO_START					= 'sl_auto_start';
 	
 	
 	/** @var BXSG_Plugin The plugin instance */

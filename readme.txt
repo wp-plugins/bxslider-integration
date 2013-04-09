@@ -3,7 +3,7 @@ Contributors: vprat, marvinlabs
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.5.1
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -103,6 +103,11 @@ just like any other simple plugin.
 Because you did not ask :p
 
 == Changelog ==
+
+= 1.2.0 (2013/04/09) =
+
+* Added an option and a shortcode parameter to enable/disable adaptive height 
+* Added an option and a shortcode parameter to enable/disable slideshow automatic start
 
 = 1.1.1 (2013/04/08) =
 
