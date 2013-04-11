@@ -54,6 +54,7 @@ class BXSG_SliderShortcode {
 	public function process_slider_shortcode( $params = array(), $content = null ) {
 		// Extract parameters and provide defaults for the missing ones
 		extract( shortcode_atts( array(
+				'transition'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_DEFAULT_TRANSITION ),
 				'adaptive_height'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_ADAPTIVE_HEIGHT ),
 				'auto_start'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_AUTO_START )
 			), $params ) );

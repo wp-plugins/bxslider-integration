@@ -60,6 +60,7 @@ class BXSG_GalleryShortcode {
 		// Extract parameters and provide defaults for the missing ones
 		extract( shortcode_atts( array(
 				'ids'				=> null,
+				'transition'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_DEFAULT_TRANSITION ),
 				'exclude_featured'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_EXCLUDE_FEATURED_IMAGE ),
 				'hide_carousel'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_HIDE_CAROUSEL ),
 				'adaptive_height'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_GS_ADAPTIVE_HEIGHT ),

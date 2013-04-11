@@ -99,6 +99,24 @@ class BXSG_Settings {
 						. '</p>' )
 			);	
 		
+		add_settings_field(
+				self::$OPTION_DEFAULT_TRANSITION, 
+				__('Slide transitions', 'bxsg'),
+				array( &$this, 'print_select_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_general_settings',
+				array( 
+					'option_id' => self::$OPTION_DEFAULT_TRANSITION, 
+					'options'	=> array( 
+						'fade' 			=> __( 'Fade', 'bxsg' ),
+						'horizontal' 	=> __( 'Slide horizontally', 'bxsg' ),
+						'vertical' 		=> __( 'Slide vertically', 'bxsg' ) ),
+	    			'caption'	=> '<p class="description">'
+	    				. __( 'The default type of transition to use to go from one slide to another one. ', 'bxsg' ) 
+	    				. __( 'This can be overriden in the shortcode itself by passing the parameter <code>transition=fade</code>, <code>transition=horizontal</code> or <code>transition=vertical</code>.', 'bxsg' )
+	    				. '</p>' )
+			);	
+		
 		// Gallery shortcode settings
 		add_settings_section(
 				'bxsg_section_gallery_shortcode',
@@ -301,6 +319,7 @@ class BXSG_Settings {
     	
     	// Build the trusted options array
     	$this->validate_boolean( $input, $validated, self::$OPTION_INCLUDE_CSS );  
+    	$this->validate_enum( $input, $validated, self::$OPTION_DEFAULT_TRANSITION, array( 'fade', 'horizontal', 'vertical' ) );    
     	  
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_REPLACE_DEFAULT_GALLERIES );    
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_EXCLUDE_FEATURED_IMAGE );      
@@ -325,6 +344,18 @@ class BXSG_Settings {
     
     private function validate_boolean( $input, &$validated, $option_id ) {
     	$validated[ $option_id ] = isset( $input[ $option_id ] ) ? true : false; 
+    }
+    
+    private function validate_enum( $input, &$validated, $option_id, $enum_values ) {
+    	if ( !in_array( $input[ $option_id ], $enum_values ) ) {
+    		add_settings_error( $option_id, 'settings-errors',
+    			$option_id . ': ' . $input[ $option_id ] . __( ' is not a valid value', 'bxsg' ), 'error' );
+    		
+    		$validated[ $option_id ] = $this->default_options[ $option_id ];
+    		return;	
+    	} 
+    	
+    	$validated[ $option_id ] = $input[ $option_id ];
     }
     
     private function validate_int( $input, &$validated, $option_id, $min = null, $max = null ) {
@@ -380,6 +411,7 @@ class BXSG_Settings {
      * 
      * @param string $option_id
      * @param string $type
+     * @param string $caption
      */
     public function print_input_field( $args ) {  
     	extract( $args );
@@ -405,6 +437,30 @@ class BXSG_Settings {
     	}
 	}
 	
+    /**
+     * Output a select field for a setting
+     * 
+     * @param string $option_id
+     * @param array  $options
+     * @param string $caption
+     */
+    public function print_select_field( $args ) {  
+    	extract( $args );
+    	
+    	echo sprintf( '<select id="%s" name="%s[%s]">', 
+    			esc_attr( $option_id ),
+    			self::$OPTIONS_GROUP,
+    			esc_attr( $option_id ) );
+    	
+    	foreach ( $options as $value => $label ) {
+    		$selected = ( $this->options[ $option_id ] == $value ) ? 'selected="selected"' : '';
+    		
+    		echo sprintf( '<option value="%s" %s>%s</option>', esc_attr( $value ), $selected, $label );
+    	}
+    	
+    	echo '</select>' . $caption;
+	}
+	
     /* ------------ OTHER FUNCTIONS -------------------------------------------------------- */
 	
 	/**
@@ -414,6 +470,7 @@ class BXSG_Settings {
 		$current_options = get_option( BXSG_Settings::$OPTIONS_GROUP );		
 		$this->default_options = array(
 				self::$OPTION_INCLUDE_CSS 					=> true,
+				self::$OPTION_DEFAULT_TRANSITION 			=> 'horizontal',
 				
 				self::$OPTION_GS_REPLACE_DEFAULT_GALLERIES 	=> true,
 				self::$OPTION_GS_EXCLUDE_FEATURED_IMAGE 	=> true,
@@ -443,6 +500,7 @@ class BXSG_Settings {
 
 	// General options
 	public static $OPTION_INCLUDE_CSS	 				= 'include_css';
+	public static $OPTION_DEFAULT_TRANSITION			= 'transition';
 	
 	// Gallery shortcodes
 	public static $OPTION_GS_REPLACE_DEFAULT_GALLERIES 	= 'gs_replace_default_galleries';
