@@ -98,9 +98,10 @@ just like any other simple plugin.
 
 == Frequently Asked Questions ==
 
-= Why aren't there any questions here yet? =
+= Why isn't bxSlider's XXXXX option available in the plugin's settings page or shortcode? =
 
-Because you did not ask :p
+I have not yet found the use of all the bxSlider options. If you need to access any of them, please open a new topic in 
+the plugin support forum, I will add that option as soon as possible.
 
 == Changelog ==
 
