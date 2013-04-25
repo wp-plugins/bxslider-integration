@@ -27,7 +27,7 @@ $gallery_extra_classes = $adaptive_height ? 'adaptive-height-on ' : 'adaptive-he
 <?php 	
 foreach ( $attachments as $attachment ) : 
 	$img_attr = wp_get_attachment_image_src( $attachment->ID, 'full' );
-	$title = apply_filters( 'the_title', $attachment->post_title );
+	$title = apply_filters( 'the_title', $attachment->post_title, $attachment->ID );
 	$desc = $attachment->post_excerpt;
 ?>
   		<div class="bxslide"><?php echo sprintf( '<img src="%1$s" alt="%2$s" title="%3$s" />',
@@ -46,7 +46,7 @@ endforeach; ?>
 $i = 0;
 foreach ( $attachments as $attachment ) : 
 	$img_attr = wp_get_attachment_image_src( $attachment->ID, 'thumbnail' );
-	$title = apply_filters( 'the_title', $attachment->post_title );
+	$title = apply_filters( 'the_title', $attachment->post_title, $attachment->ID );
 	$desc = $attachment->post_excerpt;
 	
 	echo sprintf( '<a data-slide-index="%4$s" href="" title="%3$s"><img src="%1$s" alt="%2$s" title="%3$s" /></a>',

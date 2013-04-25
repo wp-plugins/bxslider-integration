@@ -2,8 +2,8 @@
 Contributors: vprat, marvinlabs
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
-Tested up to: 3.5.1
-Stable tag: 1.3.0
+Tested up to: 3.6
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,6 +104,10 @@ I have not yet found the use of all the bxSlider options. If you need to access 
 the plugin support forum, I will add that option as soon as possible.
 
 == Changelog ==
+
+= 1.3.1 (2013/04/11) =
+
+* Fix for an error occuring on the latest WordPress 3.6 build
 
 = 1.3.0 (2013/04/11) =
 
