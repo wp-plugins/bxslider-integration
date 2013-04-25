@@ -105,7 +105,7 @@ the plugin support forum, I will add that option as soon as possible.
 
 == Changelog ==
 
-= 1.3.1 (2013/04/11) =
+= 1.3.1 (2013/04/25) =
 
 * Fix for an error occuring on the latest WordPress 3.6 build
 
