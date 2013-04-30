@@ -28,6 +28,15 @@ Why should you use this slider? I'll quote the bxSlider's website:
 * Small file size, fully themed, simple to implement
 * Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+
 
+
+If you like our plugins, you might want to [check our website](http://www.marvinlabs.com) for more.
+
+If you want to get updates about our plugins, you can:
+* [Follow use on Twitter](http://twitter.com/marvinlabs)
+* [Follow use on Google+](https://plus.google.com/u/0/117677945360605555441)
+* [Follow use on Facebook](http://www.facebook.com/studio.marvinlabs)
+
+
 == Features ==
 
 * [gallery] and [bxgallery] shortcodes

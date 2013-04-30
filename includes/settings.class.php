@@ -341,54 +341,80 @@ class BXSG_Settings {
     	$this->options = $validated;    	
 		return $validated;
     }
-    
-    private function validate_boolean( $input, &$validated, $option_id ) {
-    	$validated[ $option_id ] = isset( $input[ $option_id ] ) ? true : false; 
-    }
-    
-    private function validate_enum( $input, &$validated, $option_id, $enum_values ) {
-    	if ( !in_array( $input[ $option_id ], $enum_values ) ) {
-    		add_settings_error( $option_id, 'settings-errors',
-    			$option_id . ': ' . $input[ $option_id ] . __( ' is not a valid value', 'bxsg' ), 'error' );
-    		
-    		$validated[ $option_id ] = $this->default_options[ $option_id ];
-    		return;	
-    	} 
-    	
-    	$validated[ $option_id ] = $input[ $option_id ];
-    }
-    
-    private function validate_int( $input, &$validated, $option_id, $min = null, $max = null ) {
-    	// Must be an int
-    	if ( !is_int( intval( $input[ $option_id ] ) ) ) {
-    		add_settings_error( $option_id, 'settings-errors', 
-    			$option_id . ': ' . __( 'must be an integer', 'bxsg' ), 'error' );
 
-    		$validated[ $option_id ] = $this->default_options[ $option_id ];
-    		return;
-    	}
-    	
-    	// Must be > min
-    	if ( $min!==null && $input[ $option_id ] < $min ) {
-    		add_settings_error( $option_id, 'settings-errors', 
-    			$option_id . ': ' . sprintf( __( 'must be greater than %s', 'bxsg' ), $min ), 'error' );
-    		
-    		$validated[ $option_id ] = $this->default_options[ $option_id ];
-    		return;
-    	}
-    	
-    	// Must be < max
-    	if ( $max!==null && $input[ $option_id ] > $max ) {
-    		add_settings_error( $option_id, 'settings-errors', 
-    			$option_id . ': ' . sprintf( __( 'must be lower than %s', 'bxsg' ), $max ), 'error' );
-    		
-    		$validated[ $option_id ] = $this->default_options[ $option_id ];
-    		return;
-    	}
-    	
-    	// All good
-    	$validated[ $option_id ] = intval( $input[ $option_id ] ); 
-    }
+	/* ------------ VALIDATION HELPERS ------------------------------------------------------------------------------ */
+
+	/**
+	 * Validate a boolean value within an array
+	 *
+	 * @param array $input Input array
+	 * @param array $validated Output array
+	 * @param string $option_id Key of the value to check in the input array
+	 */
+	private function validate_boolean( $input, &$validated, $option_id ) {
+		$validated[ $option_id ] = isset( $input[ $option_id ] ) ? true : false;
+	}
+
+	/**
+	 * Validate an enum value within an array
+	 *
+	 * @param array $input Input array
+	 * @param array $validated Output array
+	 * @param string $option_id Key of the value to check in the input array
+	 * @param array $enum_values Array of possible values
+	 */
+	private function validate_enum( $input, &$validated, $option_id, $enum_values ) {
+		if ( !in_array( $input[ $option_id ], $enum_values ) ) {
+			add_settings_error( $option_id, 'settings-errors',
+			$option_id . ': ' . $input[ $option_id ] . __( ' is not a valid value', 'cuar' ), 'error' );
+
+			$validated[ $option_id ] = $this->default_options[ $option_id ];
+			return;
+		}
+		 
+		$validated[ $option_id ] = $input[ $option_id ];
+	}
+
+	/**
+	 * Validate an integer value within an array
+	 *
+	 * @param array $input Input array
+	 * @param array $validated Output array
+	 * @param string $option_id Key of the value to check in the input array
+	 * @param int $min Min value for the int (set to null to ignore check)
+	 * @param int $max Max value for the int (set to null to ignore check)
+	 */
+	private function validate_int( $input, &$validated, $option_id, $min = null, $max = null ) {
+		// Must be an int
+		if ( !is_int( intval( $input[ $option_id ] ) ) ) {
+			add_settings_error( $option_id, 'settings-errors',
+			$option_id . ': ' . __( 'must be an integer', 'cuar' ), 'error' );
+
+			$validated[ $option_id ] = $this->default_options[ $option_id ];
+			return;
+		}
+		 
+		// Must be > min
+		if ( $min!==null && $input[ $option_id ] < $min ) {
+			add_settings_error( $option_id, 'settings-errors',
+			$option_id . ': ' . sprintf( __( 'must be greater than %s', 'cuar' ), $min ), 'error' );
+
+			$validated[ $option_id ] = $this->default_options[ $option_id ];
+			return;
+		}
+		 
+		// Must be < max
+		if ( $max!==null && $input[ $option_id ] > $max ) {
+			add_settings_error( $option_id, 'settings-errors',
+			$option_id . ': ' . sprintf( __( 'must be lower than %s', 'cuar' ), $max ), 'error' );
+
+			$validated[ $option_id ] = $this->default_options[ $option_id ];
+			return;
+		}
+		 
+		// All good
+		$validated[ $option_id ] = intval( $input[ $option_id ] );
+	}
 	
     /* ------------ SECTIONS OUTPUT --------------------------------------------------------- */
     
