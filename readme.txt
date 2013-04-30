@@ -3,7 +3,7 @@ Contributors: vprat, marvinlabs
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,7 @@ Why should you use this slider? I'll quote the bxSlider's website:
 If you like our plugins, you might want to [check our website](http://www.marvinlabs.com) for more.
 
 If you want to get updates about our plugins, you can:
+
 * [Follow use on Twitter](http://twitter.com/marvinlabs)
 * [Follow use on Google+](https://plus.google.com/u/0/117677945360605555441)
 * [Follow use on Facebook](http://www.facebook.com/studio.marvinlabs)
@@ -113,6 +114,10 @@ I have not yet found the use of all the bxSlider options. If you need to access 
 the plugin support forum, I will add that option as soon as possible.
 
 == Changelog ==
+
+= 1.3.2 (2013/04/30) =
+
+* Updated the documentation
 
 = 1.3.1 (2013/04/25) =
 
