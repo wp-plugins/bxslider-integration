@@ -60,7 +60,7 @@ class BXSG_Plugin {
 		$mofile = $domain . '-' . $locale . '.mo';
 
 		/* Check the global language folder */
-		$files = array( WP_LANG_DIR . '/bxslider-gallery/' . $mofile, WP_LANG_DIR . '/' . $mofile );
+		$files = array( WP_LANG_DIR . '/bxslider-integration/' . $mofile, WP_LANG_DIR . '/' . $mofile );
 		foreach ( $files as $file ){
 			if( file_exists( $file ) ) return load_textdomain( $domain, $file );
 		}
