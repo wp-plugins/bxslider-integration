@@ -1,5 +1,6 @@
 === bxSlider integration for WordPress ===
 Contributors: vprat, marvinlabs
+Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.6
