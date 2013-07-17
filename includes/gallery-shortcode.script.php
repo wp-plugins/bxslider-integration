@@ -11,6 +11,9 @@ $( '#<?php echo $gallery_id; ?> .bxslider' ).bxSlider({
 		adaptiveHeight:	<?php echo ( $adaptive_height ? 'true' : 'false'); ?>,
 		auto:	<?php echo ( $auto_start ? 'true' : 'false'); ?>,
 		mode:	'<?php echo $transition; ?>',
+		speed: 	<?php echo $speed; ?>,
+		pause: 	<?php echo $duration; ?>,
+		<?php echo $extra_options; ?>
 	});		
 	
 <?php if ( !$hide_carousel ) : ?>	

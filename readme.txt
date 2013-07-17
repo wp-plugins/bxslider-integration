@@ -4,7 +4,7 @@ Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.3.3
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,6 +115,12 @@ I have not yet found the use of all the bxSlider options. If you need to access 
 the plugin support forum, I will add that option as soon as possible.
 
 == Changelog ==
+
+= 1.4.0 (2013/07/17) =
+
+* Added an option to set the duration of slides 
+* Added an option to set the speed of transitions
+* Added an advanced option to directly inject javascript bxSlider options 
 
 = 1.3.3 (2013/05/06) =
 

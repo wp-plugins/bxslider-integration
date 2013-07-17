@@ -56,7 +56,10 @@ class BXSG_SliderShortcode {
 		extract( shortcode_atts( array(
 				'transition'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_DEFAULT_TRANSITION ),
 				'adaptive_height'	=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_ADAPTIVE_HEIGHT ),
-				'auto_start'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_AUTO_START )
+				'auto_start'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_AUTO_START ),
+				'speed'				=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_SPEED ),
+				'duration'			=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_DURATION ),
+				'extra_options'		=> $this->plugin->get_option( BXSG_Settings::$OPTION_SL_EXTRA_OPTIONS )
 			), $params ) );
 		
 		// Compute an ID for this particular slider

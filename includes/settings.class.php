@@ -201,6 +201,36 @@ class BXSG_Settings {
 			);
 		
 		add_settings_field(
+				self::$OPTION_SL_DURATION, 
+				__('Duration', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_gallery_shortcode',
+				array( 
+					'option_id' => self::$OPTION_SL_DURATION, 
+	    			'type' 		=> 'text', 
+	    			'caption'	=> '<p class="description">'
+					    				. __( 'The time before we automatically transition to the next slide (a number of milliseconds). '
+	    									. 'This can be overriden in the shortcode itself by passing the parameter <code>duration=1500</code> or <code>duration=500</code>.', 'bxsg' )
+	    								. '</p>' )
+			);	
+		
+		add_settings_field(
+				self::$OPTION_SL_SPEED, 
+				__('Speed', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_gallery_shortcode',
+				array( 
+					'option_id' => self::$OPTION_SL_SPEED, 
+	    			'type' 		=> 'text', 
+	    			'caption'	=> '<p class="description">'
+					    				. __( 'The speed of the transition (a number of milliseconds). '
+	    									. 'This can be overriden in the shortcode itself by passing the parameter <code>speed=1500</code> or <code>speed=500</code>.', 'bxsg' )
+	    								. '</p>' )
+			);	
+		
+		add_settings_field(
 				self::$OPTION_GS_CAROUSEL_THUMB_WIDTH, 
 				__('Carousel thumb width', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
@@ -269,6 +299,25 @@ class BXSG_Settings {
 					    				. __( 'The number of thumbnails to move on transition. This value must be >= min thumbnails, and <= max thumbnails. If zero (default), the number of fully-visible thumbnails will be used.', 'bxsg' )
 	    								. '</em></p>' )
 			);	
+		
+		add_settings_field(
+				self::$OPTION_SL_EXTRA_OPTIONS, 
+				__('Extra options', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_gallery_shortcode',
+				array( 
+					'option_id' => self::$OPTION_SL_EXTRA_OPTIONS, 
+	    			'type' 		=> 'textarea', 
+	    			'caption'	=> '<p class="description">'
+					    				. __( 'You may enter here any raw bxSlider option that may not be exposed as a plugin setting. Simply put the options as you would within the javascript. Here is an example:', 'bxsg' )
+	    								. '</p><small><pre><code>'
+	    								. "  useCSS: false," . "\n"
+	    								. "  infiniteLoop: false," . "\n"
+	    								. "  hideControlOnEnd: true," . "\n"
+	    								. "  easing: 'easeOutElastic'" . "\n"
+	    								. '</code></pre></small>' )
+			);	
 
 		// General slider shortcode settings 
 		add_settings_section(
@@ -307,6 +356,55 @@ class BXSG_Settings {
 	    				. __( 'This can be overriden in the shortcode itself by passing the parameter <code>auto_start=0</code> or <code>auto_start=1</code>.', 'bxsg' )
 	    				. '</p>' )
 			);
+		
+		add_settings_field(
+				self::$OPTION_GS_DURATION, 
+				__('Duration', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_slider_shortcode',
+				array( 
+					'option_id' => self::$OPTION_GS_DURATION, 
+	    			'type' 		=> 'text', 
+	    			'caption'	=> '<p class="description">'
+					    				. __( 'The time before we automatically transition to the next slide (a number of milliseconds). '
+	    									. 'This can be overriden in the shortcode itself by passing the parameter <code>duration=1500</code> or <code>duration=500</code>.', 'bxsg' )
+	    								. '</p>' )
+			);	
+		
+		add_settings_field(
+				self::$OPTION_GS_SPEED, 
+				__('Speed', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_slider_shortcode',
+				array( 
+					'option_id' => self::$OPTION_GS_SPEED, 
+	    			'type' 		=> 'text', 
+	    			'caption'	=> '<p class="description">'
+					    				. __( 'The speed of the transition (a number of milliseconds). '
+	    									. 'This can be overriden in the shortcode itself by passing the parameter <code>speed=1500</code> or <code>speed=500</code>.', 'bxsg' )
+	    								. '</p>' )
+			);	
+		
+		add_settings_field(
+				self::$OPTION_GS_EXTRA_OPTIONS, 
+				__('Extra options', 'bxsg'),
+				array( &$this, 'print_input_field' ), 
+				self::$OPTIONS_PAGE_SLUG,
+				'bxsg_section_slider_shortcode',
+				array( 
+					'option_id' => self::$OPTION_GS_EXTRA_OPTIONS, 
+	    			'type' 		=> 'textarea', 
+	    			'caption'	=> '<p class="description">'
+					    				. __( 'You may enter here any raw bxSlider option that may not be exposed as a plugin setting. Simply put the options as you would within the javascript. Here is an example:', 'bxsg' )
+	    								. '</p><small><pre><code>'
+	    								. "  useCSS: false," . "\n"
+	    								. "  infiniteLoop: false," . "\n"
+	    								. "  hideControlOnEnd: true," . "\n"
+	    								. "  easing: 'easeOutElastic'" . "\n"
+	    								. '</code></pre></small>' )
+			);	
     }
 	
     /**
@@ -326,6 +424,9 @@ class BXSG_Settings {
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_HIDE_CAROUSEL );    
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_ADAPTIVE_HEIGHT );   
     	$this->validate_boolean( $input, $validated, self::$OPTION_GS_AUTO_START );    
+    	$this->validate_int( $input, $validated, self::$OPTION_GS_SPEED );    
+    	$this->validate_int( $input, $validated, self::$OPTION_GS_DURATION );   
+    	$this->validate_string( $input, $validated, self::$OPTION_GS_EXTRA_OPTIONS );  
     	$this->validate_int( $input, $validated, self::$OPTION_GS_CAROUSEL_THUMB_WIDTH, 1 );
     	$this->validate_int( $input, $validated, self::$OPTION_GS_CAROUSEL_THUMB_MARGIN, 0 );
     	$this->validate_int( $input, $validated, self::$OPTION_GS_CAROUSEL_MIN_THUMBS, 1 );
@@ -337,12 +438,26 @@ class BXSG_Settings {
 
     	$this->validate_boolean( $input, $validated, self::$OPTION_SL_ADAPTIVE_HEIGHT );
     	$this->validate_boolean( $input, $validated, self::$OPTION_SL_AUTO_START );   
+    	$this->validate_int( $input, $validated, self::$OPTION_SL_SPEED );    
+    	$this->validate_int( $input, $validated, self::$OPTION_SL_DURATION );   
+    	$this->validate_string( $input, $validated, self::$OPTION_SL_EXTRA_OPTIONS );   
     	
     	$this->options = $validated;    	
 		return $validated;
     }
 
 	/* ------------ VALIDATION HELPERS ------------------------------------------------------------------------------ */
+
+	/**
+	 * Validate a boolean value within an array
+	 *
+	 * @param array $input Input array
+	 * @param array $validated Output array
+	 * @param string $option_id Key of the value to check in the input array
+	 */
+	private function validate_string( $input, &$validated, $option_id ) {
+		$validated[ $option_id ] = isset( $input[ $option_id ] ) ? $input[ $option_id ] : "";
+	}
 
 	/**
 	 * Validate a boolean value within an array
@@ -451,7 +566,15 @@ class BXSG_Settings {
     				( $this->options[ $option_id ]!=0 ) ? 'checked="checked" ' : '',
 					$caption
     		);
-    	} else {
+    	} else if ( $type=='textarea' ) {
+			echo sprintf( '<textarea id="%s" name="%s[%s]" class="large-text" rows="4">%s</textarea>  %s',
+					esc_attr( $option_id ),
+					self::$OPTIONS_GROUP,
+					esc_attr( $option_id ),
+					esc_html( $this->options[ $option_id ] ),
+					$caption
+			);
+		} else {
 			echo sprintf( '<input type="%s" id="%s" name="%s[%s]" value="%s" /> %s', 
 					esc_attr( $type ),
 					esc_attr( $option_id ),
@@ -503,6 +626,9 @@ class BXSG_Settings {
 				self::$OPTION_GS_HIDE_CAROUSEL 				=> false,
 				self::$OPTION_GS_ADAPTIVE_HEIGHT 			=> true,
 				self::$OPTION_GS_AUTO_START 				=> true,
+				self::$OPTION_GS_SPEED 						=> 500,
+				self::$OPTION_GS_DURATION 					=> 2000,
+				self::$OPTION_GS_EXTRA_OPTIONS 				=> '',
 				self::$OPTION_GS_CAROUSEL_THUMB_WIDTH		=> 60,
 				self::$OPTION_GS_CAROUSEL_THUMB_MARGIN		=> 5,
 				self::$OPTION_GS_CAROUSEL_MIN_THUMBS		=> 4,
@@ -511,6 +637,9 @@ class BXSG_Settings {
 
 				self::$OPTION_SL_ADAPTIVE_HEIGHT 			=> true,
 				self::$OPTION_SL_AUTO_START 				=> true,
+				self::$OPTION_SL_SPEED 						=> 500,
+				self::$OPTION_SL_DURATION 					=> 2000,
+				self::$OPTION_SL_EXTRA_OPTIONS 				=> '',
 			);
 		
 		if ( ! is_array( $current_options ) ) $current_options = array();
@@ -534,6 +663,9 @@ class BXSG_Settings {
 	public static $OPTION_GS_HIDE_CAROUSEL 				= 'gs_hide_carousel';
 	public static $OPTION_GS_ADAPTIVE_HEIGHT			= 'gs_adaptive_height';
 	public static $OPTION_GS_AUTO_START					= 'gs_auto_start';
+	public static $OPTION_GS_SPEED						= 'gs_speed';
+	public static $OPTION_GS_DURATION					= 'gs_duration';
+	public static $OPTION_GS_EXTRA_OPTIONS				= 'gs_extra_options';
 	public static $OPTION_GS_CAROUSEL_THUMB_WIDTH		= 'gs_carousel_thumb_width';
 	public static $OPTION_GS_CAROUSEL_THUMB_MARGIN		= 'gs_carousel_thumb_margin';
 	public static $OPTION_GS_CAROUSEL_MIN_THUMBS		= 'gs_carousel_min_thumbs';
@@ -543,6 +675,9 @@ class BXSG_Settings {
 	// Slider shortcodes
 	public static $OPTION_SL_ADAPTIVE_HEIGHT			= 'sl_adaptive_height';
 	public static $OPTION_SL_AUTO_START					= 'sl_auto_start';
+	public static $OPTION_SL_SPEED						= 'sl_speed';
+	public static $OPTION_SL_DURATION					= 'sl_duration';
+	public static $OPTION_SL_EXTRA_OPTIONS				= 'sl_extra_options';
 	
 	
 	/** @var BXSG_Plugin The plugin instance */
