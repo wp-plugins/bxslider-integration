@@ -201,13 +201,13 @@ class BXSG_Settings {
 			);
 		
 		add_settings_field(
-				self::$OPTION_SL_DURATION, 
+				self::$OPTION_GS_DURATION, 
 				__('Duration', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
 				self::$OPTIONS_PAGE_SLUG,
 				'bxsg_section_gallery_shortcode',
 				array( 
-					'option_id' => self::$OPTION_SL_DURATION, 
+					'option_id' => self::$OPTION_GS_DURATION, 
 	    			'type' 		=> 'text', 
 	    			'caption'	=> '<p class="description">'
 					    				. __( 'The time before we automatically transition to the next slide (a number of milliseconds). '
@@ -216,13 +216,13 @@ class BXSG_Settings {
 			);	
 		
 		add_settings_field(
-				self::$OPTION_SL_SPEED, 
+				self::$OPTION_GS_SPEED, 
 				__('Speed', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
 				self::$OPTIONS_PAGE_SLUG,
 				'bxsg_section_gallery_shortcode',
 				array( 
-					'option_id' => self::$OPTION_SL_SPEED, 
+					'option_id' => self::$OPTION_GS_SPEED, 
 	    			'type' 		=> 'text', 
 	    			'caption'	=> '<p class="description">'
 					    				. __( 'The speed of the transition (a number of milliseconds). '
@@ -301,13 +301,13 @@ class BXSG_Settings {
 			);	
 		
 		add_settings_field(
-				self::$OPTION_SL_EXTRA_OPTIONS, 
+				self::$OPTION_GS_EXTRA_OPTIONS, 
 				__('Extra options', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
 				self::$OPTIONS_PAGE_SLUG,
 				'bxsg_section_gallery_shortcode',
 				array( 
-					'option_id' => self::$OPTION_SL_EXTRA_OPTIONS, 
+					'option_id' => self::$OPTION_GS_EXTRA_OPTIONS, 
 	    			'type' 		=> 'textarea', 
 	    			'caption'	=> '<p class="description">'
 					    				. __( 'You may enter here any raw bxSlider option that may not be exposed as a plugin setting. Simply put the options as you would within the javascript. Here is an example:', 'bxsg' )
@@ -358,13 +358,13 @@ class BXSG_Settings {
 			);
 		
 		add_settings_field(
-				self::$OPTION_GS_DURATION, 
+				self::$OPTION_SL_DURATION, 
 				__('Duration', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
 				self::$OPTIONS_PAGE_SLUG,
 				'bxsg_section_slider_shortcode',
 				array( 
-					'option_id' => self::$OPTION_GS_DURATION, 
+					'option_id' => self::$OPTION_SL_DURATION, 
 	    			'type' 		=> 'text', 
 	    			'caption'	=> '<p class="description">'
 					    				. __( 'The time before we automatically transition to the next slide (a number of milliseconds). '
@@ -373,13 +373,13 @@ class BXSG_Settings {
 			);	
 		
 		add_settings_field(
-				self::$OPTION_GS_SPEED, 
+				self::$OPTION_SL_SPEED, 
 				__('Speed', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
 				self::$OPTIONS_PAGE_SLUG,
 				'bxsg_section_slider_shortcode',
 				array( 
-					'option_id' => self::$OPTION_GS_SPEED, 
+					'option_id' => self::$OPTION_SL_SPEED, 
 	    			'type' 		=> 'text', 
 	    			'caption'	=> '<p class="description">'
 					    				. __( 'The speed of the transition (a number of milliseconds). '
@@ -388,13 +388,13 @@ class BXSG_Settings {
 			);	
 		
 		add_settings_field(
-				self::$OPTION_GS_EXTRA_OPTIONS, 
+				self::$OPTION_SL_EXTRA_OPTIONS, 
 				__('Extra options', 'bxsg'),
 				array( &$this, 'print_input_field' ), 
 				self::$OPTIONS_PAGE_SLUG,
 				'bxsg_section_slider_shortcode',
 				array( 
-					'option_id' => self::$OPTION_GS_EXTRA_OPTIONS, 
+					'option_id' => self::$OPTION_SL_EXTRA_OPTIONS, 
 	    			'type' 		=> 'textarea', 
 	    			'caption'	=> '<p class="description">'
 					    				. __( 'You may enter here any raw bxSlider option that may not be exposed as a plugin setting. Simply put the options as you would within the javascript. Here is an example:', 'bxsg' )
