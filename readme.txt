@@ -58,7 +58,16 @@ will be excluded from the gallery. If you omit this parameter, it will default t
 page. 
 - **hide_carousel** *[1 or 0]*: if set to 1, the carousel with thumbnails will not be shown. If you omit this 
 parameter, it will default to the value set in the plugin settings page. 
-
+- **duration** *integer*: the duration of slides in milliseconds 
+- **speed** *integer*: the speed of transitions in milliseconds 
+- **extra_options** *comma-separated list of javascript options to be passed to bxSlider directly*: this allows to 
+directly specify some options for bxSlider if those options are not yet provided as settings or shortcode parameters by
+our plugin. For instance: [bxgallery extra_options="pager: false, "]
+- **transition** *'fade', 'horizontal' or 'vertical'*: the type of transition between slides
+- **adaptive_height** *[1 or 0]*: if set to 1, the height of the slider/gallery will automatically adjust to the content
+of the current slide
+- **auto_start** *[1 or 0]*: if set to 1, the slideshow will automatically start after the page has loaded.
+				
 = [slider] and [bxslider] shortcodes =
 
 You can also build your own custom sliders, with any content you'd like in them. 
@@ -73,6 +82,18 @@ You can also build your own custom sliders, with any content you'd like in them.
         And thus we are now having the third slide of this slider. Below we close the initial shortcode to notify the end 
         of the slider. Simple, isn't it?
     [/slider]
+    
+The shortcode accepts the following parameters:
+
+- **duration** *integer*: the duration of slides in milliseconds 
+- **speed** *integer*: the speed of transitions in milliseconds 
+- **extra_options** *comma-separated list of javascript options to be passed to bxSlider directly*: this allows to 
+directly specify some options for bxSlider if those options are not yet provided as settings or shortcode parameters by
+our plugin. For instance: [bxgallery extra_options="pager: false, "]
+- **transition** *'fade', 'horizontal' or 'vertical'*: the type of transition between slides
+- **adaptive_height** *[1 or 0]*: if set to 1, the height of the slider/gallery will automatically adjust to the content
+of the current slide
+- **auto_start** *[1 or 0]*: if set to 1, the slideshow will automatically start after the page has loaded.
 
 = Template functions =
 
@@ -113,6 +134,9 @@ just like any other simple plugin.
 
 I have not yet found the use of all the bxSlider options. If you need to access any of them, please open a new topic in 
 the plugin support forum, I will add that option as soon as possible.
+
+You can in the meantime use the shortcode parameter "extra_options" (or the setting to have those parameters set for 
+every gallery/slider).  
 
 == Changelog ==
 
