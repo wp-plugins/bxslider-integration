@@ -4,7 +4,7 @@ Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -139,6 +139,10 @@ You can in the meantime use the shortcode parameter "extra_options" (or the sett
 every gallery/slider).  
 
 == Changelog ==
+
+= 1.4.2 (2013/08/20) =
+
+* Fixed typo in javascript and css links. 
 
 = 1.4.1 (2013/07/29) =
 
