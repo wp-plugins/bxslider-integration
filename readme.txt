@@ -3,8 +3,8 @@ Contributors: vprat, marvinlabs
 Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 1.4.2
+Tested up to: 3.7.1
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,7 @@ our plugin. For instance: [bxgallery extra_options="pager: false, "]
 - **adaptive_height** *[1 or 0]*: if set to 1, the height of the slider/gallery will automatically adjust to the content
 of the current slide
 - **auto_start** *[1 or 0]*: if set to 1, the slideshow will automatically start after the page has loaded.
+- **shuffle** *[1 or 0]*: if set to 1, the images will be shown in random order
 				
 = [slider] and [bxslider] shortcodes =
 
@@ -139,6 +140,11 @@ You can in the meantime use the shortcode parameter "extra_options" (or the sett
 every gallery/slider).  
 
 == Changelog ==
+
+= 1.5.0 (2013/11/06) =
+
+* Added a shortcode to shuffle the gallery images.
+* Fixed URLs when using an alternate wp-content folder
 
 = 1.4.2 (2013/08/20) =
 
