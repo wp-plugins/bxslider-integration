@@ -3,8 +3,8 @@ Contributors: vprat, marvinlabs
 Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
-Tested up to: 3.7.1
-Stable tag: 1.5.0
+Tested up to: 3.8.1
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -140,6 +140,10 @@ You can in the meantime use the shortcode parameter "extra_options" (or the sett
 every gallery/slider).  
 
 == Changelog ==
+
+= 1.5.1 (2014/01/17) =
+
+* Added an option to avoid adding the bxSlider javascript when the theme (or another plugin) already includes it
 
 = 1.5.0 (2013/11/06) =
 
