@@ -4,7 +4,7 @@ Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.8.1
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -141,6 +141,10 @@ every gallery/slider).
 
 == Changelog ==
 
+= 1.5.2 (2014/04/10) =
+
+* The sliders get assigned to a JS variable so they can be re-used somewhere else (for instance to reload the slider)
+
 = 1.5.1 (2014/01/17) =
 
 * Added an option to avoid adding the bxSlider javascript when the theme (or another plugin) already includes it
@@ -188,7 +192,7 @@ every gallery/slider).
 
 = 1.1.1 (2013/04/08) =
 
-* Fixed a bug on activation ([function.array-merge]: Argument #2 is not an array in bxslider-integration/includes/settings.class.php)
+* Fixed a bug on activation ([function.array-merge]: Argument #2 is not an array in bxslider-integration/includes/core-classes/settings.class.php)
 
 = 1.1.0 (2013/03/29) =
 
