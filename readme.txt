@@ -127,8 +127,8 @@ just like any other simple plugin.
 == Translations ==
 
 * French by [MarvinLabs](http://www.marvinlabs.com)
-* Serbian by [Ogi Djuraskovic](http://firstsiteguide.com/)
-* Spanish by [Andrew Kurtis](http://www.webhostinghub.com/)
+* Serbian by [Ogi Djuraskovic of First Site Guide](http://firstsiteguide.com/)
+* Spanish by [Andrew Kurtis of WebHostingHub](http://www.webhostinghub.com/)
 
 == Screenshots ==
 
@@ -148,8 +148,8 @@ every gallery/slider).
 
 = 1.6.1 (2014/08/19) =
 
-* New: Serbian language by [Ogi Djuraskovic](http://firstsiteguide.com/)
-* New: Spanish language by [Andrew Kurtis](http://www.webhostinghub.com/)
+* New: Serbian language by [Ogi Djuraskovic of First Site Guide](http://firstsiteguide.com/)
+* New: Spanish language by [Andrew Kurtis of WebHostingHub](http://www.webhostinghub.com/)
 
 = 1.6.0 (2014/05/15) =
 
