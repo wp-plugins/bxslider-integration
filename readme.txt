@@ -4,7 +4,7 @@ Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,7 +37,6 @@ If you want to get updates about our plugins, you can:
 * [Follow us on Twitter](http://twitter.com/marvinlabs)
 * [Follow us on Google+](https://plus.google.com/u/0/117677945360605555441)
 * [Follow us on Facebook](http://www.facebook.com/studio.marvinlabs)
-
 
 == Features ==
 
@@ -125,6 +124,12 @@ Nothing worth mentionning yet. You might visit the settings page though to adjus
 Nothing special, just upload the files, activate and you can then visit the settings page if you want. Really, it's 
 just like any other simple plugin.
 
+== Translations ==
+
+* French by [MarvinLabs](http://www.marvinlabs.com)
+* Serbian by [Ogi Djuraskovic](http://firstsiteguide.com/)
+* Spanish by [Andrew Kurtis](http://www.webhostinghub.com/)
+
 == Screenshots ==
 
 1. A standard WordPress gallery turned into a slider with a thumbnail carousel.
@@ -140,6 +145,11 @@ You can in the meantime use the shortcode parameter "extra_options" (or the sett
 every gallery/slider).  
 
 == Changelog ==
+
+= 1.6.1 (2014/08/19) =
+
+* New: Serbian language by [Ogi Djuraskovic](http://firstsiteguide.com/)
+* New: Spanish language by [Andrew Kurtis](http://www.webhostinghub.com/)
 
 = 1.6.0 (2014/05/15) =
 

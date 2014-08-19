@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: bxSlider for WordPress\n"
-"POT-Creation-Date: 2014-08-08 22:12+0100\n"
-"PO-Revision-Date: 2014-08-08 22:20+0100\n"
+"POT-Creation-Date: 2014-08-11 09:55+0100\n"
+"PO-Revision-Date: 2014-08-11 14:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: MarvinLabs\n"
 "Language: FR\n"
@@ -20,61 +20,60 @@ msgstr ""
 #: ../includes/settings.class.php:59 ../includes/settings.class.php:60
 #: ../includes/settings.view.php:22
 msgid "bxSlider integration"
-msgstr "Intégration de bxSlider"
+msgstr "bxSlider integrisanje"
 
 #: ../includes/settings.class.php:82
 msgid "General Settings"
-msgstr "Réglages généraux"
+msgstr "Opšte postavke"
 
 #: ../includes/settings.class.php:89
 msgid "Include CSS"
-msgstr "Inclure le CSS"
+msgstr "Uključi CSS"
 
 #: ../includes/settings.class.php:96
 msgid "Include the default stylesheet."
-msgstr "Inclure la feuille de style par défaut"
+msgstr "Uključi podrazumevanu datoteku sa stilovima."
 
 #: ../includes/settings.class.php:98
 msgid "If not, you should style the slider yourself in your theme."
-msgstr ""
-"Si non, vous devrez mettre en forme le plugin par vous-même dans votre thème."
+msgstr "Ako nećete, sami treba da stilizujete slajder u svojoj temi."
 
 #: ../includes/settings.class.php:104
 msgid "Include JS"
-msgstr "Inclure le JavaScript"
+msgstr "Obuhvati JS"
 
 #: ../includes/settings.class.php:111
 msgid "Include the bxSlider script."
-msgstr "Inclure le script de bxSlider."
+msgstr "Obuhvati bxSlider script."
 
 #: ../includes/settings.class.php:113
 msgid ""
 "Uncheck this option only if your theme already provides a compatible "
 "bxSlider javascript. Else, leave it on."
 msgstr ""
-"Désactivez cette option seulement si votre thème inclue déjà le javascript "
-"de bxSlider. Sinon, laissez cette case cochée."
+"Poništite štikliranje ove opcije isključivo ako vaša tema već obezbeđuje "
+"kompatibilan bxSlider javascript. U suprotnom, ostavite opciju štikliranu."
 
 #: ../includes/settings.class.php:119
 msgid "Slide transitions"
-msgstr "Transitions des diapos"
+msgstr "Prelaz s jednog slajda na drugi"
 
 #: ../includes/settings.class.php:126
 msgid "Fade"
-msgstr "Fondu"
+msgstr "Postepeno bledi"
 
 #: ../includes/settings.class.php:127
 msgid "Slide horizontally"
-msgstr "Glissé horizontal"
+msgstr "Kliza horizontalno"
 
 #: ../includes/settings.class.php:128
 msgid "Slide vertically"
-msgstr "Glissé vertical"
+msgstr "Kliza vertikalno"
 
 #: ../includes/settings.class.php:130
 msgid ""
 "The default type of transition to use to go from one slide to another one. "
-msgstr "Le type de transition par défaut entre les diapos."
+msgstr "Podrazumevani tip prelaza s jednog slajda na drugi."
 
 #: ../includes/settings.class.php:131
 msgid ""
@@ -82,103 +81,101 @@ msgid ""
 "<code>transition=fade</code>, <code>transition=horizontal</code> or "
 "<code>transition=vertical</code>."
 msgstr ""
-"Ceci peut être redéfini dans le shortcode en passant le paramètre "
-"<code>transition=fade</code>, <code>transition=horizontal</code> ou "
+"Ova vrednost može se poništi u kratkom kodu unosom parametara:"
+"<code>transition=fade</code>, <code>transition=horizontal</code>ili "
 "<code>transition=vertical</code>."
 
 #: ../includes/settings.class.php:138
 msgid "Gallery Shortcodes"
-msgstr "Shortcodes de gallerie"
+msgstr "Kratki kodovi galerije"
 
 #: ../includes/settings.class.php:145
 msgid "Default WordPress galleries"
-msgstr "Galleries intégrées WordPress"
+msgstr "Podrazumevane WordPress galerije"
 
 #: ../includes/settings.class.php:152
 msgid "Replace the default WordPress gallery for a bxSlider based one."
 msgstr ""
-"Remplacer les galleries intégrées WordPress par des galleries bxSlider."
+"Zameni podrazumevanu WordPress galeriju onom koja se bazira na bxSlider-u."
 
 #: ../includes/settings.class.php:154
 msgid ""
 "All the galleries included in your posts and pages with the [gallery] "
 "shortcode will turn into cool dynamic galleries using the bxSlider script."
 msgstr ""
-"Toutes les galleries inclues dans vos articles et vos pages avec le "
-"shortcode [gallery] seront transformées en galleries dynamiques bxSlider."
+"Sve galerije uključene u vaše postove i stranice sa kratkim kodom [galerije] "
+"pretvoriće se u savremene, dinamičke galerije koje koriste bxSlider script."
 
 #: ../includes/settings.class.php:160
 msgid "Exclude featured image"
-msgstr "Exclure l'image à la une"
+msgstr "Isključi uobličenu sliku"
 
 #: ../includes/settings.class.php:167
 msgid ""
 "Exclude the featured image from the galleries that show all the post images."
-msgstr ""
-"Exclure l'image à la une des galleries qui montrent toutes les images de "
-"l'article"
+msgstr "Isključi uobličenu sliku iz galerija koje prikazuju sve slike posta."
 
 #: ../includes/settings.class.php:169
 msgid ""
 "This can be overriden in the shortcode itself by passing the parameter "
 "<code>exclude_featured=0</code> or <code>exclude_featured=1</code>."
 msgstr ""
-"Ceci peut être redéfini dans le shortcode en passant le paramètre "
-"<code>exclude_featured=0</code> ou <code>exclude_featured=1</code>."
+"Ovo se može poništiti u samom kratkom kodu unosom parametra "
+"<code>exclude_featured=0</code> ili <code>exclude_featured=1</code>."
 
 #: ../includes/settings.class.php:175
 msgid "Hide the carousel"
-msgstr "Masquer le carrousel"
+msgstr "Sakrij karusel"
 
 #: ../includes/settings.class.php:182
 msgid "You can hide the default thumbnail carousel shown above the gallery."
 msgstr ""
-"Vous pouvez masquer le carrousel de miniatures affiché au dessus des "
-"galleries."
+"Možete sakriti podrazumevani karusel sa sličicama koji se prikazuje iznad "
+"galerije. "
 
 #: ../includes/settings.class.php:184
 msgid ""
 "This can be overriden in the shortcode itself by passing the parameter "
 "<code>hide_carousel=0</code> or <code>hide_carousel=1</code>."
 msgstr ""
-"Ceci peut être redéfini dans le shortcode en passant le paramètre "
-"<code>hide_carousel=0</code> ou <code>hide_carousel=1</code>."
+"Ovo se može poništiti u samom kratkom kodu unosom parametra "
+"<code>hide_carousel=0</code> ili <code>hide_carousel=1</code>."
 
 #: ../includes/settings.class.php:190 ../includes/settings.class.php:347
 msgid "Adaptive height"
-msgstr "Hauteur adaptative"
+msgstr "Prilagodljiva visina"
 
 #: ../includes/settings.class.php:197 ../includes/settings.class.php:354
 msgid "Dynamically adjust slider height based on each slide's height."
-msgstr "Ajuster dynamiquement la hauteur du slider selon la diapo en cours."
+msgstr "Dinamički prilagođava visinu slajdera na osnovu visine svakog slajda."
 
 #: ../includes/settings.class.php:199 ../includes/settings.class.php:356
 msgid ""
 "This can be overriden in the shortcode itself by passing the parameter "
 "<code>adaptive_height=0</code> or <code>adaptive_height=1</code>."
 msgstr ""
-"Ceci peut être redéfini dans le shortcode en passant le paramètre "
-"<code>adaptive_height=0</code> ou <code>adaptive_height=1</code>."
+"Ovo se može poništiti u samom kratkom kodu unosom parametra "
+"<code>adaptive_height=0</code> ili <code>adaptive_height=1</code>."
 
 #: ../includes/settings.class.php:205 ../includes/settings.class.php:362
 msgid "Auto start"
-msgstr "Démarrage automatique"
+msgstr "Automatski početak"
 
 #: ../includes/settings.class.php:212
 msgid "Gallery slideshow will automatically start."
-msgstr "Le diaporama de la gallerie démarre automatiquement."
+msgstr "Prikaz galerije slajdova počeće automatski."
 
 #: ../includes/settings.class.php:214 ../includes/settings.class.php:371
 msgid ""
 "This can be overriden in the shortcode itself by passing the parameter "
 "<code>auto_start=0</code> or <code>auto_start=1</code>."
 msgstr ""
-"Ceci peut être redéfini dans le shortcode en passant le paramètre "
-"<code>auto_start=0</code> ou <code>auto_start=1</code>."
+"Ovo se može poništiti u samom kratkom kodu unosom parametra "
+"<code>auto_start=0</code> ili <code>auto_start=1</code>."
 
 #: ../includes/settings.class.php:220 ../includes/settings.class.php:377
 msgid "Duration"
-msgstr "Durée"
+msgstr "Trajanje"
 
 #: ../includes/settings.class.php:228 ../includes/settings.class.php:385
 msgid ""
@@ -186,13 +183,13 @@ msgid ""
 "milliseconds). This can be overriden in the shortcode itself by passing the "
 "parameter <code>duration=1500</code> or <code>duration=500</code>."
 msgstr ""
-"Le temps avant d'automatiquement transitioner vers le slide suivant (en "
-"millisecondes). Ceci peut être redéfini dans le shortcode en passant le "
-"paramètre <code>duration=1500</code> ou <code>duration=500</code>."
+"Vreme koje prođe pre nego što automatski pređemo na sledeći slajd (broj "
+"milisekundi). Može se poništiti u kratkom kodu unosom parametra:"
+"<code>duration=1500</code> ili <code>duration=500</code>."
 
 #: ../includes/settings.class.php:235 ../includes/settings.class.php:392
 msgid "Speed"
-msgstr "Vitesse"
+msgstr "Brzina"
 
 #: ../includes/settings.class.php:243 ../includes/settings.class.php:400
 msgid ""
@@ -200,49 +197,49 @@ msgid ""
 "overriden in the shortcode itself by passing the parameter <code>speed=1500</"
 "code> or <code>speed=500</code>."
 msgstr ""
-"La vitesse de transition (en millisecondes). Ceci peut être redéfini dans le "
-"shortcode en passant le paramètre <code>speed=1500</code> ou "
-"<code>speed=500</code>."
+"Brzina tranzicije (broj milisekundi). Može se poništiti u kratkom kodu "
+"unosom parametra:<code>speed=1500</code> ili <code>speed=500</code>."
 
 #: ../includes/settings.class.php:250
 msgid "Carousel thumb width"
-msgstr "Largeur de miniature dans le carrousel"
+msgstr "Širina sličice u karuselu"
 
 #: ../includes/settings.class.php:258 ../includes/settings.class.php:272
 msgid "a number without unit; Will be interpreted as a value in pixels"
-msgstr "Un nombre sans unité ; Sera interprété comme une valeur en pixels"
+msgstr ""
+"broj bez jedinice vrednosti; tumačiće se kao vrednost izražena u pikselima"
 
 #: ../includes/settings.class.php:264
 msgid "Carousel thumb margin"
-msgstr "Marge entre les miniatures dans le carrousel"
+msgstr "Margina sličice u karuselu"
 
 #: ../includes/settings.class.php:278
 msgid "Carousel min thumbs"
-msgstr "Nombre min. de miniatures"
+msgstr "Minimalan broj sličica u karuselu"
 
 #: ../includes/settings.class.php:286
 msgid ""
 "The minimum number of thumbnails to be shown. Thumbnails will be sized down "
 "if carousel becomes smaller than the original size"
 msgstr ""
-"Le nombre minimal de miniatures à afficher dans le carrousel. Les miniatures "
-"seront réduites si le carrouseil devient plus petit que sa taille originale"
+"Minimalan broj sličica koje će biti prikazane u karuselu. Sličice će biti "
+"smanjene ako karusel postane manji od originalne veličine."
 
 #: ../includes/settings.class.php:292
 msgid "Carousel max thumbs"
-msgstr "Nombre max. de miniatures"
+msgstr "Maksimalan broj sličica u karuselu"
 
 #: ../includes/settings.class.php:300
 msgid ""
 "The maximum number of thumbnails to be shown. Thumbnails will be sized up if "
 "carousel becomes larger than the original size."
 msgstr ""
-"Le nombre maximal de miniatures à afficher dans le carrousel. Les miniatures "
-"seront agrandies si le carrouseil devient plus grand que sa taille originale"
+"Maksimalan broj sličica koje će biti prikazane u karuselu. Sličice će biti "
+"uvećane ako karusel postane veći od originalne veličine."
 
 #: ../includes/settings.class.php:306
 msgid "Skip thumbnails"
-msgstr "Saut de miniatures"
+msgstr "Preskoči sličice"
 
 #: ../includes/settings.class.php:314
 msgid ""
@@ -250,13 +247,13 @@ msgid ""
 "thumbnails, and <= max thumbnails. If zero (default), the number of fully-"
 "visible thumbnails will be used."
 msgstr ""
-"Le nombre de miniatures à sauter lors d'une transition. Cette valeur doit "
-"être >= au nombre minimal de miniatures et <= au nombre maximal. Si c'est 0 "
-"(par défaut), le nombre de miniatures visibles entièrement sera utilisé."
+"Broj sličica koje će se kretati u prelazu. Vrednost mora biti >= min "
+"sličica, and <= max sličica. Ako je broj 0 (podrazumevani), koristiće se "
+"broj potpuno vidljivih sličica."
 
 #: ../includes/settings.class.php:320 ../includes/settings.class.php:407
 msgid "Extra options"
-msgstr "Options supplémentaires"
+msgstr "Dodatne opcije"
 
 #: ../includes/settings.class.php:328 ../includes/settings.class.php:415
 msgid ""
@@ -264,51 +261,49 @@ msgid ""
 "plugin setting. Simply put the options as you would within the javascript. "
 "Here is an example:"
 msgstr ""
-"Vous pouvez saisir ici n'importe quelle option native de bxSlider qui n'est "
-"pas exposée comme réglage du plugin. Ecrivez simplement l'option comme vous "
-"le feriez avec le javascript. Voici un exemple :"
+"Ovde možete uneti bilo koju sirovu bxSlider opciju koja se ne može izložiti "
+"kao opcija za plugin. Jednostavno, formulišite opcije kao što biste uradili "
+"da je u pitanju javascript. Evo primera:"
 
 #: ../includes/settings.class.php:340
 msgid "Slider Shortcodes"
-msgstr "Shortcodes Slider"
+msgstr "Kratki kodovi slajdera"
 
 #: ../includes/settings.class.php:369
 msgid "Slides will automatically transition after the page is loaded."
-msgstr "Les diapos défileront automatiquement après le chargement de la page."
+msgstr "Slajdovi će se automatski smenjivati nakon učitavanja stranice."
 
 #: ../includes/settings.class.php:500
 msgid " is not a valid value"
-msgstr "n'est pas une valeur valide"
+msgstr "vrednost nije validna"
 
 #: ../includes/settings.class.php:522
 msgid "must be an integer"
-msgstr "doit être un entier"
+msgstr "mora biti ceo broj"
 
 #: ../includes/settings.class.php:531
 #, php-format
 msgid "must be greater than %s"
-msgstr "doit être plus grand que %s"
+msgstr "mora biti veći od  %s"
 
 #: ../includes/settings.class.php:540
 #, php-format
 msgid "must be lower than %s"
-msgstr "doit être plus petit que %s"
+msgstr "mora biti manji od %s"
 
 #: ../includes/settings.class.php:557
 msgid ""
 "Options related to the shortcodes that output an image gallery: <code>"
 "[gallery]</code> or <code>[bxgallery]</code>."
-msgstr ""
-"Options liées aux shortcodes qui produisent une gallerie d'images : <code>"
-"[gallery]</code> or=u <code>[bxgallery]</code>."
+msgstr "Opcije u vezi sa kratkim kodovima koji čine galeriju slika:"
 
 #: ../includes/settings.class.php:561
 msgid ""
 "Options related to the shortcodes that output a generic slider: <code>"
 "[slider]</code> or <code>[bxslider]</code>."
 msgstr ""
-"Options liées aux shortcodes qui produisent un slider générique : <code>"
-"[slider]</code> ou <code>[bxslider]</code>."
+"Opcije u vezi sa kratkim kodovima koji čine generički slajder:<code>[slider]"
+"</code> ili <code>[bxslider]</code>."
 
 #~ msgid "Register"
 #~ msgstr "S'enregistrer"
