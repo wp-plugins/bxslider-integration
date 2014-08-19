@@ -4,7 +4,7 @@ Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 1.6.1
+Stable tag: 1.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -146,7 +146,7 @@ every gallery/slider).
 
 == Changelog ==
 
-= 1.6.1 (2014/08/19) =
+= 1.6.2 (2014/08/19) =
 
 * New: Serbian language by [Ogi Djuraskovic of First Site Guide](http://firstsiteguide.com/)
 * New: Spanish language by [Andrew Kurtis of WebHostingHub](http://www.webhostinghub.com/)
