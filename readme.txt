@@ -4,16 +4,16 @@ Donate link: http://www.marvinlabs.com/donate/
 Tags: wordpress, gallery, slider, bxslider, slideshow, 
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 1.6.2
+Stable tag: 1.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-bxSlider for WordPress integrates the cool responsive content slider "bxSlider jQuery plugin" in your very own WordPress 
+bxSlider for WordPress integrates the great responsive content slider "bxSlider jQuery plugin" in your very own WordPress
 site.
 
 == Description ==
 
-bxSlider for WordPress integrates the cool responsive content slider [bxSlider jQuery plugin](http://bxslider.com/) in 
+bxSlider for WordPress integrates the great responsive content slider [bxSlider jQuery plugin](http://bxslider.com/) in
 your very own WordPress site. Galleries are turned into beautiful sliders, but you can also roll you own sliders using 
 special shortcode. The best thing is that you are not limited to the number of sliders or galleries per page, you can 
 have as many as you want! 
@@ -29,14 +29,16 @@ Why should you use this slider? I'll quote the bxSlider's website:
 * Small file size, fully themed, simple to implement
 * Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+
 
+=== Languages ===
 
-If you like our plugins, you might want to [check our website](http://www.marvinlabs.com) for more.
+Easy Digital Downloads has been translated into the following languages:
 
-If you want to get updates about our plugins, you can:
+English (and British English)
+German
+Spanish
 
-* [Follow us on Twitter](http://twitter.com/marvinlabs)
-* [Follow us on Google+](https://plus.google.com/u/0/117677945360605555441)
-* [Follow us on Facebook](http://www.facebook.com/studio.marvinlabs)
+Would you like to help translate the plugin into more languages? [Join our WP-Translations
+Community](https://www.transifex.com/projects/p/bxslider-integration-for-wordpress/).
 
 == Features ==
 
@@ -124,16 +126,6 @@ Nothing worth mentionning yet. You might visit the settings page though to adjus
 Nothing special, just upload the files, activate and you can then visit the settings page if you want. Really, it's 
 just like any other simple plugin.
 
-== Translations ==
-
-* French by [MarvinLabs](http://www.marvinlabs.com)
-* Serbian by [Ogi Djuraskovic of First Site Guide](http://firstsiteguide.com/)
-* Spanish by [Andrew Kurtis of WebHostingHub](http://www.webhostinghub.com/)
-
-== Screenshots ==
-
-1. A standard WordPress gallery turned into a slider with a thumbnail carousel.
-
 == Frequently Asked Questions ==
 
 = Why isn't bxSlider's XXXXX option available in the plugin's settings page or shortcode? =
@@ -146,10 +138,10 @@ every gallery/slider).
 
 == Changelog ==
 
-= 1.6.2 (2014/08/19) =
+= 1.7.2 (2015/03/02) =
 
-* New: Serbian language by [Ogi Djuraskovic of First Site Guide](http://firstsiteguide.com/)
-* New: Spanish language by [Andrew Kurtis of WebHostingHub](http://www.webhostinghub.com/)
+* New: Better structure for the plugin sources and release system
+* New: Be part of our translator community at wp-translations.org
 
 = 1.6.0 (2014/05/15) =
 

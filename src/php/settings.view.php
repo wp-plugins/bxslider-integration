@@ -17,14 +17,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 */
 ?>
 
-if ( typeof sliders==="undefined" ) {
-	var sliders = new Array();
-}
-sliders['<?php echo $slider_id; ?>'] = $( '#<?php echo $slider_id; ?> .bxslider' ).bxSlider({
-		adaptiveHeight:	<?php echo ( $adaptive_height ? 'true' : 'false'); ?>,
-		auto:	<?php echo ( $auto_start ? 'true' : 'false'); ?>,
-		mode:	'<?php echo $transition; ?>',
-		speed: 	<?php echo $speed; ?>,
-		pause: 	<?php echo $duration; ?>,
-		<?php echo $extra_options; ?>
-	});		
+<div class="wrap">
+    <?php screen_icon(); ?>
+    <h2><?php _e('bxSlider integration', 'bxsg'); ?></h2>
+
+    <form method="post" action="options.php">
+
+        <?php
+        settings_fields(BXSG_Settings::$OPTIONS_GROUP);
+        do_settings_sections(BXSG_Settings::$OPTIONS_PAGE_SLUG);
+        ?>
+
+        <?php submit_button(); ?>
+    </form>
+</div>

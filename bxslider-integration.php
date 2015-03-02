@@ -2,7 +2,7 @@
 /*
 Plugin Name: bxSlider integration for WordPress
 Plugin URI: http://www.marvinlabs.com
-Version: 1.6.2
+Version: 1.7.2
 Description: Replaces the native WordPress galleries by a slider based on the jQuery plugin: bxSlider 
 Author: MarvinLabs
 Author URI: http://www.marvinlabs.com
@@ -29,11 +29,11 @@ Domain Path: /languages
 
 define( 'BXSG_PLUGIN_DIR', 		plugin_dir_path( __FILE__ ) );
 define( 'BXSG_LANGUAGE_DIR', 	'bxslider-integration/languages' );
-define( 'BXSG_INCLUDES_DIR', 	BXSG_PLUGIN_DIR . '/includes' );
+define( 'BXSG_INCLUDES_DIR', 	BXSG_PLUGIN_DIR . '/src/php' );
 
 define( 'BXSG_PLUGIN_URL', 		WP_PLUGIN_URL . '/bxslider-integration/' );
-define( 'BXSG_SCRIPTS_URL', 	BXSG_PLUGIN_URL . 'scripts' );
-define( 'BXSG_STYLES_URL', 		BXSG_PLUGIN_URL . 'styles' );
+define( 'BXSG_SCRIPTS_URL', 	BXSG_PLUGIN_URL . 'assets/js' );
+define( 'BXSG_STYLES_URL', 		BXSG_PLUGIN_URL . 'assets/css' );
 
 include_once( BXSG_INCLUDES_DIR . '/plugin.class.php' );
 include_once( BXSG_INCLUDES_DIR . '/theme-utils.class.php' );
